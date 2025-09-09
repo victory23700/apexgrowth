@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Growth - Professional SMM Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4361ee',
+            secondary: '#3a0ca3',
+            accent: '#f72585',
+            dark: '#1a202c',
+            light: '#f8fafc'
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 50%, #7209b7 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .service-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+      color: #4361ee;
+    }
+    
+    .stat-number {
+      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center">
+        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+          <i class="fas fa-rocket text-white"></i>
+        </div>
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Apex Growth</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#services" class="font-medium hover:text-primary transition">Services</a>
+        <a href="#features" class="font-medium hover:text-primary transition">Features</a>
+        <a href="#pricing" class="font-medium hover:text-primary transition">Pricing</a>
+        <a href="#faq" class="font-medium hover:text-primary transition">FAQ</a>
+      </nav>
+      <div class="flex space-x-4">
+        <a href="loogin.php" class="bg-white text-primary border border-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition">Login</a>
+        <a href="signup.php" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-32 pb-20 text-white">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Boost Your Social Media Presence Instantly</h2>
+        <p class="text-xl mb-8 opacity-90">Get real followers, likes, views & more for Instagram, TikTok, YouTube and beyond with our premium SMM panel services.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="signup.php" class="bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition text-center">Get Started Now</a>
+          <a href="#services" class="border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition text-center">View Services</a>
+        </div>
+        <div class="flex mt-10 space-x-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold stat-number">50K+</div>
+            <div class="text-sm opacity-80">Happy Clients</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold stat-number">2M+</div>
+            <div class="text-sm opacity-80">Orders Completed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold stat-number">99.8%</div>
+            <div class="text-sm opacity-80">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative">
+          <div class="absolute -top-10 -left-10 w-32 h-32 bg-white bg-opacity-10 rounded-full animate-pulse-slow"></div>
+          <div class="absolute -bottom-8 -right-8 w-24 h-24 bg-accent bg-opacity-20 rounded-full animate-pulse-slow"></div>
+          <div class="relative bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 shadow-2xl">
+            <div class="flex justify-center mb-6">
+              <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center">
+                <i class="fas fa-chart-line text-3xl text-primary"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-center mb-4">Instant Growth Analytics</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span>Followers Growth</span>
+                <span class="font-bold">+1,234</span>
+              </div>
+              <div class="h-2 bg-white bg-opacity-20 rounded-full overflow-hidden">
+                <div class="h-full bg-green-400 rounded-full" style="width: 78%"></div>
+              </div>
+              <div class="flex justify-between">
+                <span>Engagement Rate</span>
+                <span class="font-bold">+42%</span>
+              </div>
+              <div class="h-2 bg-white bg-opacity-20 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-400 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">How It Works</h3>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">Getting started with Apex Growth is simple and straightforward. Boost your social media in just three easy steps.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-light rounded-2xl p-6 text-center card-hover">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-user-plus text-2xl text-primary"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">1. Create Account</h4>
+          <p class="text-gray-600">Sign up in seconds and verify your email to get started.</p>
+        </div>
+        <div class="bg-light rounded-2xl p-6 text-center card-hover">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-credit-card text-2xl text-primary"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">2. Add Funds</h4>
+          <p class="text-gray-600">Top up your balance securely using multiple payment methods.</p>
+        </div>
+        <div class="bg-light rounded-2xl p-6 text-center card-hover">
+          <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-bolt text-2xl text-primary"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">3. Place Order</h4>
+          <p class="text-gray-600">Choose your service, paste link, and watch results roll in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="features" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">Why Choose Apex Growth?</h3>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">We provide the best SMM panel services with unmatched quality and reliability.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-2xl text-green-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Lightning Fast Delivery</h4>
+          <p class="text-gray-600">Most orders start within minutes and complete quickly, depending on the package.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-tag text-2xl text-blue-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Affordable Pricing</h4>
+          <p class="text-gray-600">Get the best prices on the market with no hidden fees or extra charges.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-2xl text-purple-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">High Quality Services</h4>
+          <p class="text-gray-600">All services are tested and safe to use without risking your account.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-headset text-2xl text-red-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">24/7 Support</h4>
+          <p class="text-gray-600">Our support team is always ready to help you with any questions or issues.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-lock text-2xl text-yellow-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Secure Payments</h4>
+          <p class="text-gray-600">We use encrypted payment processing to keep your financial data safe.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 card-hover">
+          <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-sync-alt text-2xl text-pink-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Refill Guarantee</h4>
+          <p class="text-gray-600">We offer refills for drops in followers or likes within the guarantee period.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">Our Popular Services</h3>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16">We offer a wide range of social media marketing services for all major platforms.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 text-center card-hover service-card">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fab fa-instagram text-3xl text-blue-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Instagram</h4>
+          <p class="text-gray-600 mb-4">Followers, Likes, Views, Comments</p>
+          <div class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full inline-block">From $0.89/1K</div>
+        </div>
+        <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 text-center card-hover service-card">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fab fa-tiktok text-3xl text-red-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">TikTok</h4>
+          <p class="text-gray-600 mb-4">Followers, Likes, Views, Shares</p>
+          <div class="bg-red-100 text-red-800 text-sm font-semibold px-3 py-1 rounded-full inline-block">From $1.20/1K</div>
+        </div>
+        <div class="bg-gradient-to-br from-red-50 to-rose-50 rounded-2xl p-6 text-center card-hover service-card">
+          <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fab fa-youtube text-3xl text-red-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">YouTube</h4>
+          <p class="text-gray-600 mb-4">Subscribers, Views, Likes, Comments</p>
+          <div class="bg-red-100 text-red-800 text-sm font-semibold px-3 py-1 rounded-full inline-block">From $2.50/1K</div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 text-center card-hover service-card">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fab fa-twitter text-3xl text-blue-600 service-icon"></i>
+          </div>
+          <h4 class="font-bold text-xl mb-2">Twitter</h4>
+          <p class="text-gray-600 mb-4">Followers, Likes, Retweets, Comments</p>
+          <div class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full inline-block">From $0.75/1K</div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="signup.php" class="bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-secondary transition inline-flex items-center">
+          View All Services <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">Frequently Asked Questions</h3>
+      <p class="text-gray-600 text-center mb-16">Find answers to common questions about our SMM panel services.</p>
+      
+      <div class="space-y-4">
+        <div class="faq-item bg-white rounded-2xl p-6 cursor-pointer">
+          <div class="flex justify-between items-center">
+            <h4 class="font-semibold text-lg">Is this service safe for my account?</h4>
+            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+          </div>
+          <div class="faq-answer mt-4">
+            <p class="text-gray-600">Yes ✅ all our services are tested and completely safe to use without risking your account. We use organic growth methods that comply with platform guidelines.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-2xl p-6 cursor-pointer">
+          <div class="flex justify-between items-center">
+            <h4 class="font-semibold text-lg">How fast will I see results?</h4>
+            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+          </div>
+          <div class="faq-answer mt-4">
+            <p class="text-gray-600">Most services start within minutes and complete quickly, depending on the package size. Smaller orders (up to 5K) usually complete within 24-48 hours, while larger orders may take longer.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-2xl p-6 cursor-pointer">
+          <div class="flex justify-between items-center">
+            <h4 class="font-semibold text-lg">Do I need to share my password?</h4>
+            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+          </div>
+          <div class="faq-answer mt-4">
+            <p class="text-gray-600">Never ❌. We never ask for your password. All you need to provide is your username or post link for us to deliver the service.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-2xl p-6 cursor-pointer">
+          <div class="flex justify-between items-center">
+            <h4 class="font-semibold text-lg">What payment methods do you accept?</h4>
+            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+          </div>
+          <div class="faq-answer mt-4">
+            <p class="text-gray-600">We accept various payment methods including credit/debit cards, PayPal, cryptocurrencies (Bitcoin, USDT), and bank transfers for larger amounts.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item bg-white rounded-2xl p-6 cursor-pointer">
+          <div class="flex justify-between items-center">
+            <h4 class="font-semibold text-lg">Do you offer refunds?</h4>
+            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+          </div>
+          <div class="faq-answer mt-4">
+            <p class="text-gray-600">We offer refills for orders that don't complete as specified. If we're unable to complete your order, we'll issue a full refund to your account balance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 hero-gradient text-white">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Boost Your Social Presence?</h2>
+      <p class="text-xl mb-10 opacity-90">Join thousands of satisfied customers who have grown their social media with Apex Growth.</p>
+      <a href="signup.php" class="bg-white text-primary font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition inline-block">Get Started Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
+            <i class="fas fa-rocket text-white"></i>
+          </div>
+          <h2 class="text-xl font-bold">Apex Growth</h2>
+        </div>
+        <p class="text-gray-400">The #1 SMM panel for all your social media growth needs.</p>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram Services</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">TikTok Services</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">YouTube Services</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter Services</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Connect</h3>
+        <div class="flex space-x-4 mb-4">
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
+        <p class="text-gray-400">support@apexgrowth.com</p>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>© 2025 Apex Growth. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

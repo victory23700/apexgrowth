@@ -1,0 +1,36 @@
+2bf4bdd4ed5921e0444cd6e0c907a4fd<?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#new-order" class="block hover:bg-gray-700 p-2 rounded">➕ New Order</a>
+      <a href="#orders" class="block hover:bg-gray-700 p-2 rounded">📋 Orders</a>
+      <a href="#balance" class="block hover:bg-gray-700 p-2 rounded">💰 Balance</a>
+      <a href="#services" class="block hover:bg-gray-700 p-2 rounded">🛠 Services</a>
+      <a href="logout.php" class="block hover:bg-red-600 p-2 rounded">🚪 Logout</a>
+      <a href="addfunds.php" class="block hover:bg-gray-700 p-2 rounded">💰 Add Funds</a>
